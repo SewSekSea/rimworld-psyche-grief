@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!--
+    The main one. A single situational thought whose stage is chosen in code from the
+    grief ledger: how long ago the loss was, how close they were, and whether the body
+    was ever laid to rest. Only the heaviest current loss is shown here; a second
+    unresolved loss adds GR_MoreLosses on top.
+  -->
+  <ThoughtDef>
+    <defName>GR_Grieving</defName>
+    <thoughtClass>Grief.Thought_Grief</thoughtClass>
+    <workerClass>Grief.ThoughtWorker_Grieving</workerClass>
+    <icon>Things/Mote/ThoughtSymbol/Skull</icon>
+    <validWhileDespawned>true</validWhileDespawned>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+    </nullifyingTraits>
+    <stages>
+      <!-- 0: shock. It has not landed yet. -->
+      <li>
+        <label>numb</label>
+        <description>They're gone. I keep expecting to turn around and see them.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+      <!-- 1: raw -->
+      <li>
+        <label>grieving</label>
+        <description>I can't think about anything else for long. It keeps coming back.</description>
+        <baseMoodEffect>-18</baseMoodEffect>
+      </li>
+      <!-- 2: aching -->
+      <li>
+        <label>mourning</label>
+        <description>Most of the day is bearable now. Then something reminds me and it isn't.</description>
+        <baseMoodEffect>-11</baseMoodEffect>
+      </li>
+      <!-- 3: dull -->
+      <li>
+        <label>carrying it</label>
+        <description>It doesn't stop me any more. It's just there.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+      <!-- 4: the long tail, only for the closest losses -->
+      <li>
+        <label>still think about them</label>
+        <description>Some days I go hours without remembering. Then I do.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+      <!-- 5: stuck, because there was never a burial -->
+      <li>
+        <label>no grave to visit</label>
+        <description>There is nowhere to go and stand. Nothing was ever done properly. It sits exactly where it was the day it happened.</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- More than one loss still open at the same time. -->
+  <ThoughtDef>
+    <defName>GR_MoreLosses</defName>
+    <workerClass>Grief.ThoughtWorker_MoreLosses</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>too many gone</label>
+        <description>I have not finished with one before the next. There has not been room to feel any of it properly.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+      <li>
+        <label>this place is a graveyard</label>
+        <description>I have lost count of who we have put in the ground. I don't know how anyone here is still standing.</description>
+        <baseMoodEffect>-14</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Laid to rest properly. A small steadying, given once the grave exists. -->
+  <ThoughtDef>
+    <defName>GR_AtRest</defName>
+    <workerClass>Grief.ThoughtWorker_AtRest</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>they're at rest</label>
+        <description>It was done properly, and that helps more than I expected. There is somewhere to go and stand, or at least it was not simply left.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Standing in the room where it happened. -->
+  <ThoughtDef>
+    <defName>GR_WhereItHappened</defName>
+    <workerClass>Grief.ThoughtWorker_WhereItHappened</workerClass>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>this is where it happened</label>
+        <description>I know exactly which bit of floor it was. I can't be in here without looking at it.</description>
+        <baseMoodEffect>-6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Was standing right there and walked away unhurt. -->
+  <ThoughtDef>
+    <defName>GR_SurvivorsGuilt</defName>
+    <durationDays>20</durationDays>
+    <stackLimit>3</stackLimit>
+    <stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+    <showBubble>true</showBubble>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+      <li>Bloodlust</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>I walked away and {0} didn't</label>
+        <description>I was standing right there. It could as easily have been me, and I have not worked out why it wasn't.</description>
+        <baseMoodEffect>-8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- A year to the day. -->
+  <ThoughtDef>
+    <defName>GR_Anniversary</defName>
+    <durationDays>1.5</durationDays>
+    <stackLimit>3</stackLimit>
+    <showBubble>true</showBubble>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>a year since {0} died</label>
+        <description>It is a year today. I did not think I would still be counting.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <!-- Sitting with someone who lost the same person. Opinion, for both of them. -->
+  <ThoughtDef>
+    <defName>GR_RememberedTogether</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <showBubble>true</showBubble>
+    <durationDays>25</durationDays>
+    <stackLimit>300</stackLimit>
+    <stackLimitForSameOtherPawn>4</stackLimitForSameOtherPawn>
+    <stackedEffectMultiplier>0.85</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>we remember the same person</label>
+        <baseOpinionOffset>18</baseOpinionOffset>
+      </li>
+    </stages>
+    <thoughtToMake>GR_RememberedTogetherMood</thoughtToMake>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>GR_RememberedTogetherMood</defName>
+    <durationDays>3</durationDays>
+    <stackLimit>4</stackLimit>
+    <stackedEffectMultiplier>0.8</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>talked about them</label>
+        <description>We sat and talked about them for a while. Nothing is fixed, but it was better than not saying anything.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <!-- Granted by the gathering itself when a wake ends, to everyone who stayed for it. -->
+  <ThoughtDef>
+    <defName>GR_AttendedWake</defName>
+    <durationDays>8</durationDays>
+    <stackLimit>3</stackLimit>
+    <stackedEffectMultiplier>0.7</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>attended a wake</label>
+        <description>We stood together and said goodbye properly. It does not undo anything. It helped.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

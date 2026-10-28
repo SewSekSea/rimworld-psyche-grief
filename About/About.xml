@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Grief</name>
+  <author>T&amp;B Modding</author>
+  <packageId>grief.mourning</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+    <li>1.7</li>
+  </supportedVersions>
+  <description>Losing someone should not be a mood penalty that quietly runs out.
+
+In the base game, a colonist whose wife dies carries a flat penalty for thirty days and then is fine. This mod gives grief a shape instead.
+
+Grief that changes over time
+- Shock, then raw grief, then an ache, then a dullness, and for the closest losses something that never entirely goes.
+- How hard it hits depends on who they were: a spouse or a child is not a colleague. Someone who had been with the colony for years is not someone who arrived last week.
+- It replaces the base game's flat penalty rather than adding to it.
+
+Burial matters
+- Someone laid in a grave or a sarcophagus comes to rest, and the grief moves on.
+- Someone never recovered, butchered, or left lying about stays an open wound. The grief sticks and will not progress.
+- Burying them later resolves it, however long it has been.
+
+The rest
+- Where it happened: standing in the room where someone died is hard for the first couple of weeks.
+- Survivor's guilt: being right there, unhurt, when someone else was not.
+- Anniversaries: a year on, it comes back for a day.
+- Shared grief: two colonists who lost the same person can sit with it together, which helps them both.
+
+This mod only changes how colonists feel. It never changes how anyone aims, works or chooses a job.
+
+Requires Harmony. Safe to add to an existing save. RimWorld 1.6, no DLC needed.</description>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>Ludeon.RimWorld</li>
+    <li>sociopath.trait</li>
+    <li>machiavelli.trait</li>
+    <li>squad.morale</li>
+    <li>squad.ptsd</li>
+  </loadAfter>
+</ModMetaData>

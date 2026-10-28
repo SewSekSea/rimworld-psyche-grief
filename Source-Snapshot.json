@@ -1,0 +1,86 @@
+{
+  "name": "Grief",
+  "packageId": "grief.mourning",
+  "assemblyName": "Grief",
+  "repositoryName": "rimworld-psyche-grief",
+  "workshopId": "3805078287",
+  "metadataVersions": [
+    "1.6",
+    "1.7"
+  ],
+  "originalSourceUnit": "Psyche Mods/Grief",
+  "sourceSnapshotUtc": "2026-10-28T17:10:11.899Z",
+  "sourceFileFingerprints": [
+    {
+      "path": "About/About.xml",
+      "sha256": "5B447B548E06CDA37554330756B549538E5869FF172B1C4C145AE44D42F21931",
+      "bytes": 2095
+    },
+    {
+      "path": "About/Preview.png",
+      "sha256": "C4E3E70568F0447D33F36D5963C9E0746A7A37CD0D837FA4DAA6EDF89BEE9185",
+      "bytes": 84170
+    },
+    {
+      "path": "About/PublishedFileId.txt",
+      "sha256": "A9DB24303657F188899E608D54A2CACEF227D5172AA184C7802201B2DA6BD701",
+      "bytes": 10
+    },
+    {
+      "path": "Defs/GatheringDefs/Grief_Gatherings.xml",
+      "sha256": "D7BB9C2E9154CB4FEF021949AC4F66313D912E9E3C74B2BEAE6F7BAF851B9373",
+      "bytes": 991
+    },
+    {
+      "path": "Defs/InteractionDefs/Grief_Interactions.xml",
+      "sha256": "8CEE5F1EE2F09FCB9B80856C8F03AD0C7041A65E5558960A46F095172A1D1B5D",
+      "bytes": 1239
+    },
+    {
+      "path": "Defs/ThoughtDefs/Grief_Thoughts.xml",
+      "sha256": "B1A6C5405CF70953BC715679E23DF91D49975CB1E78F0F95B5C53EF04F4BCD5B",
+      "bytes": 7002
+    },
+    {
+      "path": "Source/Grief/Grief.csproj",
+      "sha256": "24194F24ABB686E1CA3C88FF9084125353AF7DC48AC9456C8E893FF61B4DAE0A",
+      "bytes": 1625
+    },
+    {
+      "path": "Source/Grief/GriefCore.cs",
+      "sha256": "A2A62BB7960CA17E59FA02469132929D5562E140D594F4E30FB75F712C85F084",
+      "bytes": 8752
+    },
+    {
+      "path": "Source/Grief/HarmonyPatches.cs",
+      "sha256": "19BB18B7049937CA1FD8576D7287EFADEE55E0581819D5D1C7E7234DEADACD5E",
+      "bytes": 4750
+    },
+    {
+      "path": "Source/Grief/Ledger.cs",
+      "sha256": "6A98C265DFD7BA5965F7DD24B57A2D92AB551C84A98AFCA2C42B7FCF6DFF8E93",
+      "bytes": 17248
+    },
+    {
+      "path": "Source/Grief/Settings.cs",
+      "sha256": "F6E3F287F30D9E5679CC96980C74A2D6133C21787DFFFEDE2C6791FEE787AC7B",
+      "bytes": 5590
+    },
+    {
+      "path": "Source/Grief/Wake.cs",
+      "sha256": "085319EAFA0CF7719DD81CFB4DBEEAF9E9403168700DC14DBB9825845D1F88E8",
+      "bytes": 7825
+    },
+    {
+      "path": "Source/Grief/Workers.cs",
+      "sha256": "2BE644CEB7FF85CBE32243C689F6A0C719434B634600AA4049BC9DA14C0C1B01",
+      "bytes": 7449
+    }
+  ],
+  "stagedProjectAdjustments": [],
+  "build16": "NOT_RUN_THIS_PASS",
+  "build17": "COMPILED_AGAINST_LOCAL_1.7_API",
+  "nativePlaytest": "NOT_RUN_THIS_PUBLICATION_PASS",
+  "gameplaySourceModified": false,
+  "compiled17SHA256": "5068FE3FC2AA24D3F57D74D5148E996318AB2F8EADCC7ECB4B886AD494319357"
+}

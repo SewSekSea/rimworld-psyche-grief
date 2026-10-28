@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!--
+    Two colonists who lost the same person talk about them. Only fires when both are
+    actually carrying that loss, so it can't happen out of nowhere.
+  -->
+  <InteractionDef>
+    <defName>GR_Remember</defName>
+    <label>remember together</label>
+    <workerClass>Grief.InteractionWorker_Remember</workerClass>
+    <symbol>Things/Mote/SpeechSymbols/DeepTalk</symbol>
+    <recipientThought>GR_RememberedTogether</recipientThought>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry->[INITIATOR_nameDef] [remembered] [RECIPIENT_nameDef] [about].</li>
+
+        <li>remembered(p=3)->talked with</li>
+        <li>remembered->sat a while with</li>
+        <li>remembered->shared a memory with</li>
+        <li>remembered->reminisced with</li>
+
+        <li>about->about the one they both lost</li>
+        <li>about->about how it used to be</li>
+        <li>about->about something the dead one used to say</li>
+        <li>about->about the last time they saw them</li>
+        <li>about->about what should have been done differently</li>
+        <li>about->until neither of them could speak</li>
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+
+</Defs>

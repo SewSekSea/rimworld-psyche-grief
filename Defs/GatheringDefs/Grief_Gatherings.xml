@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--
+    A wake. Never selected by the storyteller's random gathering roll: randomSelectionWeight is
+    zero and Grief starts this itself, in the days after a burial. A wake follows a death. It is
+    not something a colony does on a slow afternoon because the dice said so.
+  -->
+  <GatheringDef>
+    <defName>GR_Wake</defName>
+    <label>wake</label>
+    <randomSelectionWeight>0</randomSelectionWeight>
+    <respectTimetable>false</respectTimetable>
+    <duty>Party</duty>
+    <workerClass>Grief.GatheringWorker_Wake</workerClass>
+    <letterTitle>Wake</letterTitle>
+    <letterText>The colony is gathering at the graveside. Anyone who goes and stays a while will find the loss a little easier to carry — but only this loss, and only for the person buried here.</letterText>
+    <calledOffMessage>The wake has been called off.</calledOffMessage>
+    <finishedMessage>The wake has finished.</finishedMessage>
+  </GatheringDef>
+
+</Defs>
